@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hilal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hilal | IT Student & Web Developer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Hilal portfolio website – IT student and web developer specializing in HTML & CSS." />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font (optional but professional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Header -->
-  <header>
-    <h1>Hilal</h1>
-    <nav>
+  <header class="header">
+    <h1 class="logo">Hilal</h1>
+
+    <nav class="nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -19,67 +31,81 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Hello, I'm Hilal 👋</h2>
-    <p>IT Student | Web Developer</p>
-    <a href="helal.pdf" download>
-    <button>Download CV</button></a>
-  </section>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <h2>Hello, I'm Hilal 👋</h2>
+      <p>IT Student | Web Developer</p>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an IT student learning web development.  
-      I enjoy building modern and responsive websites using HTML and CSS.
-    </p>
-  </section>
+      <a href="helal.pdf" download class="btn">
+        Download CV
+      </a>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">Responsive Design</div>
-      <div class="skill">Git & GitHub</div>
-    </div>
-  </section>
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio built with HTML & CSS.</p>
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am an IT student passionate about web development.
+        I enjoy building clean, modern, and responsive websites using HTML and CSS.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+
+      <div class="skills-container">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Git & GitHub</span>
       </div>
-      <div class="project-card">
-        <h3>Hotel Website</h3>
-        <p>Responsive hotel landing page.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="projects-container">
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio built with HTML & CSS.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Hotel Website</h3>
+          <p>Responsive hotel landing page.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Landing Page</h3>
+          <p>Modern and clean landing page design.</p>
+        </article>
       </div>
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Modern landing page design.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Contact us please-->
-<section id="contact">
-  <h2>Contact Me</h2>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
 
-  <form action="mailto:helalmeftah6468@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+      <form
+        action="mailto:helalmeftah6468@gmail.com"
+        method="post"
+        enctype="text/plain"
+        class="contact-form"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
 
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <p>© 2026 Hilal Meftah. All rights reserved.</p>
   </footer>
 
