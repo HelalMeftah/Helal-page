@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Hilal | IT Student & Web Developer</title>
 
   <!-- SEO -->
   <meta name="description" content="Hilal portfolio website – IT student and web developer specializing in HTML & CSS." />
+  <meta name="author" content="Hilal Meftah" />
+  <meta name="keywords" content="Hilal, Web Developer, IT Student, HTML, CSS, Portfolio" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google Font (optional but professional) -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -23,7 +26,7 @@
   <header class="header">
     <h1 class="logo">Hilal</h1>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -31,43 +34,47 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Main -->
   <main>
-    <section class="hero">
-      <h2>Hello, I'm Hilal 👋</h2>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Hello, I'm Hilal 👋</h2>
       <p>IT Student | Web Developer</p>
 
-      <a href="helal.pdf" download class="btn">
+      <a href="helal.pdf" download class="btn" aria-label="Download CV">
         Download CV
       </a>
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
       <p>
         I am an IT student passionate about web development.
-        I enjoy building clean, modern, and responsive websites using HTML and CSS.
+        I enjoy building clean, modern, and responsive websites
+        using HTML and CSS following best practices.
       </p>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
 
       <div class="skills-container">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
         <span class="skill">Responsive Design</span>
         <span class="skill">Git & GitHub</span>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
 
       <div class="projects-container">
+
         <article class="project-card">
           <h3>Portfolio Website</h3>
           <p>Personal portfolio built with HTML & CSS.</p>
@@ -82,12 +89,13 @@
           <h3>Landing Page</h3>
           <p>Modern and clean landing page design.</p>
         </article>
+
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Me</h2>
 
       <form
         action="mailto:helalmeftah6468@gmail.com"
@@ -95,13 +103,22 @@
         enctype="text/plain"
         class="contact-form"
       >
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <label>
+          <input type="text" name="name" placeholder="Your Name" required />
+        </label>
+
+        <label>
+          <input type="email" name="email" placeholder="Your Email" required />
+        </label>
+
+        <label>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </label>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
     </section>
+
   </main>
 
   <!-- Footer -->
