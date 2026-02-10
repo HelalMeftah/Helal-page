@@ -7,253 +7,144 @@
   <title>Hilal | IT Student & Web Developer</title>
 
   <!-- SEO -->
-  <meta name="description" content="Hilal portfolio website – IT student and web developer specializing in HTML & CSS." />
+  <meta name="description" content="Hilal portfolio website – IT student and web developer." />
   <meta name="author" content="Hilal Meftah" />
-  <meta name="keywords" content="Hilal, Web Developer, IT Student, HTML, CSS, Portfolio" />
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .hero {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .section {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .skills-container span {
-      display: inline-block;
-      margin: 10px;
-      padding: 8px 14px;
-      background: #e0e0e0;
-      border-radius: 20px;
-    }
-
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #fff;
-      margin-top: 40px;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007bff;
-    }
-
-    /* Scroll To Top */
-    #topBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-      padding: 10px 14px;
-      border-radius: 50%;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    /* Dark Mode Button */
-    #darkModeToggle {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Dark Mode */
-    body.dark {
-      background: #121212;
-      color: #f5f5f5;
-    }
-
-    body.dark .header,
-    body.dark .section,
-    body.dark .footer,
-    body.dark .project-card {
-      background: #1e1e1e;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <h1 class="logo">Hilal</h1>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+  <header>
+    <h1>Hilal</h1>
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#projects">Projects</a> |
       <a href="#contact">Contact</a>
     </nav>
+    <hr>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section>
     <h2>Hello, I'm Hilal 👋</h2>
     <p>IT Student | Web Developer</p>
-    <a href="helal.pdf" download class="btn">Download CV</a>
+    <a href="helal.pdf" download>Download CV</a>
   </section>
 
+  <hr>
+
   <!-- About -->
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I am an IT student passionate about web development.
-      I enjoy building clean, modern, and responsive websites
-      using HTML and CSS following best practices.
+      I enjoy building clean and semantic websites using HTML5.
     </p>
+
+    <!-- HTML Feature -->
+    <details>
+      <summary>More about me</summary>
+      <p>I am learning web technologies step by step and building real projects.</p>
+    </details>
   </section>
+
+  <hr>
 
   <!-- Skills -->
-  <section id="skills" class="section">
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-container">
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>Responsive Design</span>
-      <span>Git & GitHub</span>
-    </div>
+
+    <label>HTML5</label><br>
+    <progress value="90" max="100"></progress>
+
+    <br><br>
+
+    <label>CSS3</label><br>
+    <progress value="80" max="100"></progress>
+
+    <br><br>
+
+    <label>Responsive Design</label><br>
+    <progress value="75" max="100"></progress>
   </section>
+
+  <hr>
 
   <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio built with HTML & CSS.</p>
-      </div>
-      <div class="project-card">
-        <h3>Hotel Website</h3>
-        <p>Responsive hotel landing page.</p>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Modern and clean landing page design.</p>
-      </div>
-    </div>
+
+    <article>
+      <h3>Portfolio Website</h3>
+      <p>Personal website built using HTML.</p>
+      <meter value="8" min="0" max="10"></meter>
+      <small> Project quality</small>
+    </article>
+
+    <article>
+      <h3>Hotel Website</h3>
+      <p>Simple landing page structure.</p>
+      <meter value="7" min="0" max="10"></meter>
+    </article>
   </section>
 
+  <hr>
+
   <!-- Contact -->
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Me</h2>
-    <form action="mailto:helalmeftah6468@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+
+    <form action="mailto:helalmeftah6468@gmail.com" method="post" enctype="text/plain">
+      <label>
+        Name:
+        <input type="text" name="name" required>
+      </label>
+      <br><br>
+
+      <label>
+        Email:
+        <input type="email" name="email" required>
+      </label>
+      <br><br>
+
+      <label>
+        Topic:
+        <input list="topics" name="topic">
+        <datalist id="topics">
+          <option value="Web Development">
+          <option value="Freelance">
+          <option value="Collaboration">
+        </datalist>
+      </label>
+      <br><br>
+
+      <label>
+        Message:
+        <textarea name="message" required></textarea>
+      </label>
+      <br><br>
+
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
+  <hr>
+
   <!-- Footer -->
-  <footer class="footer">
-    <p>© 2026 Hilal Meftah. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="mailto:helalmeftah6468@gmail.com">Email</a>
-    </div>
+  <footer>
+    <figure>
+      <figcaption>
+        © <time datetime="2026">2026</time> Hilal Meftah
+      </figcaption>
+    </figure>
+
+    <p>
+      <a href="https://github.com/">GitHub</a> |
+      <a href="https://linkedin.com/">LinkedIn</a>
+    </p>
   </footer>
-
-  <!-- Extra Buttons -->
-  <button id="topBtn">↑</button>
-  <button id="darkModeToggle">🌙</button>
-
-  <!-- JS -->
-  <script>
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = () => {
-      topBtn.style.display =
-        document.documentElement.scrollTop > 300 ? "block" : "none";
-    };
-    topBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
-    const toggle = document.getElementById("darkModeToggle");
-    toggle.onclick = () => {
-      document.body.classList.toggle("dark");
-    };
-  </script>
 
 </body>
 </html>
