@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,13 @@
 
   <!-- SEO -->
   <meta name="description" content="Hilal portfolio website – IT student and web developer." />
+  <meta name="keywords" content="Hilal, IT Student, Web Developer, HTML5, Portfolio" />
   <meta name="author" content="Hilal Meftah" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hilal | IT Student & Web Developer">
+  <meta property="og:description" content="Personal portfolio website of Hilal, IT student and web developer.">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,7 +23,7 @@
   <!-- Header -->
   <header>
     <h1>Hilal</h1>
-    <nav>
+    <nav aria-label="Main Navigation">
       <a href="#about">About</a> |
       <a href="#skills">Skills</a> |
       <a href="#projects">Projects</a> |
@@ -27,10 +33,18 @@
   </header>
 
   <!-- Hero -->
+  <main>
   <section>
     <h2>Hello, I'm Hilal 👋</h2>
-    <p>IT Student | Web Developer</p>
-    <a href="helal.pdf" download>Download CV</a>
+    <p><strong>IT Student</strong> | <em>Web Developer</em></p>
+
+    <p>
+      <mark>Building clean & semantic websites using HTML5</mark>
+    </p>
+
+    <a href="helal.pdf" download>
+      <button type="button">Download CV</button>
+    </a>
   </section>
 
   <hr>
@@ -43,10 +57,14 @@
       I enjoy building clean and semantic websites using HTML5.
     </p>
 
-    <!-- HTML Feature -->
     <details>
       <summary>More about me</summary>
       <p>I am learning web technologies step by step and building real projects.</p>
+      <ul>
+        <li>Problem Solving</li>
+        <li>Front-End Basics</li>
+        <li>Continuous Learning</li>
+      </ul>
     </details>
   </section>
 
@@ -56,18 +74,18 @@
   <section id="skills">
     <h2>Skills</h2>
 
-    <label>HTML5</label><br>
-    <progress value="90" max="100"></progress>
+    <label for="html">HTML5</label><br>
+    <progress id="html" value="90" max="100">90%</progress>
 
     <br><br>
 
-    <label>CSS3</label><br>
-    <progress value="80" max="100"></progress>
+    <label for="css">CSS3</label><br>
+    <progress id="css" value="80" max="100">80%</progress>
 
     <br><br>
 
-    <label>Responsive Design</label><br>
-    <progress value="75" max="100"></progress>
+    <label for="responsive">Responsive Design</label><br>
+    <progress id="responsive" value="75" max="100">75%</progress>
   </section>
 
   <hr>
@@ -79,15 +97,16 @@
     <article>
       <h3>Portfolio Website</h3>
       <p>Personal website built using HTML.</p>
-      <meter value="8" min="0" max="10"></meter>
+      <meter value="8" min="0" max="10">8 out of 10</meter>
       <small> Project quality</small>
     </article>
 
     <article>
       <h3>Hotel Website</h3>
       <p>Simple landing page structure.</p>
-      <meter value="7" min="0" max="10"></meter>
+      <meter value="7" min="0" max="10">7 out of 10</meter>
     </article>
+
   </section>
 
   <hr>
@@ -96,39 +115,44 @@
   <section id="contact">
     <h2>Contact Me</h2>
 
-    <form action="mailto:helalmeftah6468@gmail.com" method="post" enctype="text/plain">
-      <label>
-        Name:
-        <input type="text" name="name" required>
-      </label>
-      <br><br>
+    <form action="mailto:helalmeftah6468@gmail.com" method="post" enctype="text/plain" autocomplete="on">
+      <fieldset>
+        <legend>Send a Message</legend>
 
-      <label>
-        Email:
-        <input type="email" name="email" required>
-      </label>
-      <br><br>
+        <label>
+          Name:
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+        <br><br>
 
-      <label>
-        Topic:
-        <input list="topics" name="topic">
-        <datalist id="topics">
-          <option value="Web Development">
-          <option value="Freelance">
-          <option value="Collaboration">
-        </datalist>
-      </label>
-      <br><br>
+        <label>
+          Email:
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <br><br>
 
-      <label>
-        Message:
-        <textarea name="message" required></textarea>
-      </label>
-      <br><br>
+        <label>
+          Topic:
+          <input list="topics" name="topic" placeholder="Select or type topic">
+          <datalist id="topics">
+            <option value="Web Development">
+            <option value="Freelance">
+            <option value="Collaboration">
+          </datalist>
+        </label>
+        <br><br>
 
-      <button type="submit">Send Message</button>
+        <label>
+          Message:
+          <textarea name="message" rows="5" cols="30" placeholder="Write your message..." required></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Send Message</button>
+      </fieldset>
     </form>
   </section>
+  </main>
 
   <hr>
 
@@ -140,10 +164,12 @@
       </figcaption>
     </figure>
 
-    <p>
-      <a href="https://github.com/">GitHub</a> |
-      <a href="https://linkedin.com/">LinkedIn</a>
-    </p>
+    <address>
+      <p>
+        <a href="https://github.com/" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      </p>
+    </address>
   </footer>
 
 </body>
