@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Hilal | IT Student & Web Developer</title>
 
-<meta name="description" content="Hilal portfolio website – IT student and web developer." />
-<meta name="keywords" content="Hilal, IT Student, Web Developer, HTML5, Portfolio" />
+<meta name="description" content="Hilal portfolio website – IT student and web developer specializing in HTML5 and responsive web design." />
+<meta name="keywords" content="Hilal, IT Student, Web Developer, HTML5, Portfolio, Responsive Design" />
 <meta name="author" content="Hilal Meftah" />
+<meta name="robots" content="index, follow" />
 
+<!-- Open Graph -->
 <meta property="og:title" content="Hilal | IT Student & Web Developer">
 <meta property="og:description" content="Personal portfolio website of Hilal, IT student and web developer.">
+<meta property="og:type" content="website">
+
+<!-- Performance -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <header>
 <h1>Hilal</h1>
@@ -34,11 +42,11 @@
 <hr>
 </header>
 
-<main>
+<main id="main">
 
 <!-- Hero -->
-<section>
-<h2>Hello, I'm Hilal 👋</h2>
+<section id="hero" aria-labelledby="hero-title">
+<h2 id="hero-title">Hello, I'm Hilal 👋</h2>
 <p><strong>IT Student</strong> | <em>Web Developer</em></p>
 
 <p>
@@ -46,11 +54,11 @@
 </p>
 
 <p>
-<a href="#contact">
+<a href="#contact" aria-label="Go to contact section">
 <button type="button">Hire Me</button>
 </a>
 
-<a href="helal.pdf" download>
+<a href="helal.pdf" download aria-label="Download Hilal CV">
 <button type="button">Download CV</button>
 </a>
 </p>
@@ -59,8 +67,8 @@
 <hr>
 
 <!-- About -->
-<section id="about">
-<h2>About Me</h2>
+<section id="about" aria-labelledby="about-title">
+<h2 id="about-title">About Me</h2>
 
 <p>
 I am an IT student passionate about web development.
@@ -87,8 +95,8 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- Skills -->
-<section id="skills">
-<h2>Skills</h2>
+<section id="skills" aria-labelledby="skills-title">
+<h2 id="skills-title">Skills</h2>
 
 <label for="html">HTML5</label><br>
 <progress id="html" value="90" max="100"></progress>
@@ -111,8 +119,8 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- Services -->
-<section id="services">
-<h2>Services</h2>
+<section id="services" aria-labelledby="services-title">
+<h2 id="services-title">Services</h2>
 
 <ul>
 <li>✔️ Landing Page Development</li>
@@ -126,15 +134,15 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- Projects -->
-<section id="projects">
-<h2>Projects</h2>
+<section id="projects" aria-labelledby="projects-title">
+<h2 id="projects-title">Projects</h2>
 
-<table border="1" cellpadding="10">
+<table>
 <thead>
 <tr>
-<th>Project</th>
-<th>Description</th>
-<th>Quality</th>
+<th scope="col">Project</th>
+<th scope="col">Description</th>
+<th scope="col">Quality</th>
 </tr>
 </thead>
 
@@ -164,8 +172,8 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- Testimonials -->
-<section id="testimonials">
-<h2>Testimonials</h2>
+<section id="testimonials" aria-labelledby="testimonials-title">
+<h2 id="testimonials-title">Testimonials</h2>
 
 <blockquote>
 <p>"Hilal is very dedicated and always eager to improve his skills."</p>
@@ -182,8 +190,8 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- FAQ -->
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
+<section id="faq" aria-labelledby="faq-title">
+<h2 id="faq-title">Frequently Asked Questions</h2>
 
 <details>
 <summary>Are you available for freelance work?</summary>
@@ -200,8 +208,8 @@ My goal is to become a professional Front-End Developer and work on real-world p
 <hr>
 
 <!-- Contact  -->
-<section id="contact">
-<h2>Contact Me</h2>
+<section id="contact" aria-labelledby="contact-title">
+<h2 id="contact-title">Contact Me</h2>
 
 <form action="mailto:helalmeftah6468@gmail.com"
 method="post"
@@ -211,35 +219,27 @@ autocomplete="on">
 <fieldset>
 <legend>Send a Message</legend>
 
-<label>
-Name:
-<input type="text" name="name" required>
-</label>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
 
 <br><br>
 
-<label>
-Email:
-<input type="email" name="email" required>
-</label>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
 
 <br><br>
 
-<label>
-Topic:
-<select name="topic">
+<label for="topic">Topic:</label>
+<select id="topic" name="topic">
 <option>Web Development</option>
 <option>Freelance</option>
 <option>Collaboration</option>
 </select>
-</label>
 
 <br><br>
 
-<label>
-Message:
-<textarea name="message" rows="5" cols="30" required></textarea>
-</label>
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="5" cols="30" required></textarea>
 
 <br><br>
 
@@ -261,8 +261,8 @@ Message:
 </p>
 
 <p>
-<a href="https://github.com/" target="_blank">GitHub</a> |
-<a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
+<a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> |
+<a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
 <a href="mailto:helalmeftah6468@gmail.com">Email</a>
 </p>
 
